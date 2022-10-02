@@ -5,6 +5,7 @@ specifiers:
   '@commitlint/cli': ^17.1.2
   '@commitlint/config-conventional': ^17.1.0
   '@next/bundle-analyzer': ^12.3.0
+  '@tailwindcss/aspect-ratio': ^0.4.2
   '@tailwindcss/forms': ^0.5.3
   '@testing-library/cypress': ^8.0.3
   '@testing-library/jest-dom': ^5.16.5
@@ -55,6 +56,7 @@ specifiers:
 
 dependencies:
   '@apollo/client': 3.7.0_gdcq4dv6opitr3wbfwyjmanyra
+  '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.1.8
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.1.8
   graphql: 16.6.0
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
@@ -1213,6 +1215,14 @@ packages:
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
     dependencies:
       tslib: 2.4.0
+    dev: false
+
+  /@tailwindcss/aspect-ratio/0.4.2_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.1.8_m6qswdslzu5ddi7v2thd72jv24
     dev: false
 
   /@tailwindcss/forms/0.5.3_tailwindcss@3.1.8:
