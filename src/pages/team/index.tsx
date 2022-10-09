@@ -141,35 +141,36 @@ export default function Team() {
 
   const handleClick = (type: string) => {
     const isSenior = type === 'senior';
-    console.log('isSenior', isSenior);
     setShowAssociate(isSenior);
   };
 
+  const iconColor = "#BF9742"
+
   return (
-    <div className="bg-white">
+    <div className="bg-white text-accent-secondary">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12">
           <div className="mx-auto space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
             <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
               Our Team
             </h2>
-            <p className="text-center text-xl text-gray-500">
+            <p className="text-center text-xl text-accent-primary">
               Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor
               ultricies donec risus sodales. Tempus quis et.
             </p>
           </div>
           <div className="flex gap-8">
             <p
-              className={`text-gray-600 hover:cursor-pointer ${
-                showAssociate ? 'border-b-2 border-gray-600' : ''
+              className={`text-accent-primary hover:cursor-pointer ${
+                showAssociate ? 'border-b-2 border-accent-primary' : ''
               }`}
               onClick={() => handleClick('senior')}
             >
               Senior
             </p>
             <p
-              className={`text-gray-600 hover:cursor-pointer ${
-                !showAssociate ? 'border-b-2 border-gray-600' : ''
+              className={`text-accent-primary hover:cursor-pointer ${
+                !showAssociate ? 'border-b-2 border-accent-primary' : ''
               }`}
               onClick={() => handleClick('associate')}
             >
@@ -195,19 +196,19 @@ export default function Team() {
                     <div className="space-y-2">
                       <div className="space-y-1 text-lg font-medium leading-6">
                         <h3>{person.name}</h3>
-                        <p className="text-indigo-600">{person.role}</p>
+                        <p className="text-accent-alternate">{person.role}</p>
                       </div>
                       <ul role="list" className="flex space-x-5">
                         <li>
                           <a
                             href={person.twitterUrl}
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-accent-primary"
                           >
                             <span className="sr-only">Twitter</span>
                             <svg
                               className="h-5 w-5"
                               aria-hidden="true"
-                              fill="currentColor"
+                              fill={iconColor}
                               viewBox="0 0 20 20"
                             >
                               <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
@@ -217,13 +218,13 @@ export default function Team() {
                         <li>
                           <a
                             href={person.linkedinUrl}
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-accent-primary"
                           >
                             <span className="sr-only">LinkedIn</span>
                             <svg
                               className="h-5 w-5"
                               aria-hidden="true"
-                              fill="currentColor"
+                              fill={iconColor}
                               viewBox="0 0 20 20"
                             >
                               <path
@@ -254,19 +255,19 @@ export default function Team() {
                     <div className="space-y-2">
                       <div className="space-y-1 text-lg font-medium leading-6">
                         <h3>{person.name}</h3>
-                        <p className="text-indigo-600">{person.role}</p>
+                        <p className="text-accent-alternate">{person.role}</p>
                       </div>
                       <ul role="list" className="flex space-x-5">
                         <li>
                           <a
                             href={person.twitterUrl}
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-accent-primary"
                           >
                             <span className="sr-only">Twitter</span>
                             <svg
                               className="h-5 w-5"
                               aria-hidden="true"
-                              fill="currentColor"
+                              fill={iconColor}
                               viewBox="0 0 20 20"
                             >
                               <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
@@ -276,13 +277,13 @@ export default function Team() {
                         <li>
                           <a
                             href={person.linkedinUrl}
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-accent-primary"
                           >
                             <span className="sr-only">LinkedIn</span>
                             <svg
                               className="h-5 w-5"
                               aria-hidden="true"
-                              fill="currentColor"
+                              fill={iconColor}
                               viewBox="0 0 20 20"
                             >
                               <path
