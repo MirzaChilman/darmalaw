@@ -43,14 +43,14 @@ const Members = [
 const Teams = () => {
   const iconColor = '#BF9742';
   return (
-    <div className="rounded-lg bg-white p-8 shadow ">
+    <div className="mx-auto rounded-lg bg-white p-8 shadow">
       <p className="text-center text-3xl font-bold text-accent-secondary ">
         Team Members
       </p>
       <p className="mb-12 text-center text-xl font-normal text-accent-primary ">
         Meat the best team in wolrd
       </p>
-      <div className="flex flex-col items-center justify-evenly md:flex-row">
+      <div className="flex flex-col items-center justify-center md:flex-row">
         {Members.map((member) => {
           return (
             <div className="p-4" key={member.name + member.summary}>

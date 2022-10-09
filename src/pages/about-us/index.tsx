@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <section className="mx-auto max-w-2xl text-center">
+    <section className="mx-auto max-w-5xl text-center">
       <h1 className="mb-2 text-4xl font-bold text-accent-secondary">
         About Us
       </h1>

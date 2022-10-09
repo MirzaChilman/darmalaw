@@ -82,14 +82,14 @@ const Portofolio = () => {
               </div>
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
-                  <a href={post.href} className="mt-2 block">
+                  <div className="mt-2 block">
                     <p className="text-xl font-semibold text-accent-secondary">
                       {post.title}
                     </p>
                     <p className="mt-3 text-base text-accent-primary">
                       {post.description}
                     </p>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
