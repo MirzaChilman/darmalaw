@@ -41,7 +41,7 @@ const Members = [
 ];
 
 const Teams = () => {
-  const iconColor = '#BF9742'
+  const iconColor = '#BF9742';
   return (
     <div className="rounded-lg bg-white p-8 shadow ">
       <p className="text-center text-3xl font-bold text-accent-secondary ">
