@@ -1,9 +1,7 @@
 @tailwind base;
-
-a {
-  @apply text-blue-700;
+a{
+  @apply border-b-2 border-transparent mb-[-2px]
 }
-
 a:hover {
   @apply border-b-2 border-accent-primary;
 }

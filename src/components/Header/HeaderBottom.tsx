@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 const HamburgerMenu = () => {
   return (
     <button className="p-4 lg:hidden">
@@ -20,47 +23,45 @@ const HamburgerMenu = () => {
 };
 const Links = [
   {
-    url: '/',
+    url: '/about-us',
     title: 'About Us',
-    isActive: false,
   },
   {
-    url: '/',
+    url: '/team',
     title: 'Team',
-    isActive: false,
   },
   {
-    url: '/',
+    url: '/client-alert',
     title: 'Client Alert',
-    isActive: false,
   },
   {
-    url: '/',
+    url: '/privacy',
     title: 'Privacy',
-    isActive: true,
   },
 ];
 
 const HeaderBottom = () => {
-  const textColor = 'text-accent-secondary'
+  const router = useRouter()
   return (
-    <header className={`bg-gray-100 p-4 ${textColor}`}>
+    <header className={`bg-gray-100 p-4 text-accent-secondary`}>
       <div className="container mx-auto flex h-16 justify-between">
         <div className="flex">
-          <ul className="hidden items-stretch space-x-3 lg:flex">
+          <ul className="hidden items-center  space-x-3 lg:flex">
             {Links.map((link) => {
+              const isActive = router.pathname.includes(link.url)
+
               return (
-                <li className="flex " key={link.title + link.url}>
-                  <a
+                <li className={`flex  font-bold  items-center  border-b-2 text-accent-secondary border-transparent px-2 ${
+                  isActive ? 'border-accent-primary border-b-2 text-accent-primary' : ''
+                }`} key={link.title + link.url}>
+                  <Link
                     rel="noopener noreferrer"
-                    href="#"
+                    href={link.url}
                     // eslint-disable-next-line tailwindcss/no-contradicting-classname
-                    className={`-mb-1 font-bold flex items-center  border-b-2 ${textColor} border-transparent px-2 ${
-                      link.isActive && 'border-accent-primary text-accent-primary'
-                    }`}
+
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
