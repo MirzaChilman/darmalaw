@@ -1,6 +1,6 @@
 const ContactForm = () => {
   return (
-    <section className="bg-gray-100 p-10">
+    <section className="bg-gray-100 p-10 text-accent-secondary">
       <h2 className="p-20 text-center text-4xl font-bold">Contact Us</h2>
       <div className="mx-auto grid max-w-6xl grid-cols-1 px-6 md:grid-cols-2 md:divide-x lg:px-8">
         <div className="py-6 md:py-0 md:px-6">
@@ -73,7 +73,7 @@ const ContactForm = () => {
           </label>
           <button
             type="button"
-            className="self-center rounded  bg-rose-600 px-8 py-2 text-lg text-white shadow hover:bg-rose-700"
+            className="self-center rounded  bg-accent-default px-8 py-2 text-lg text-accent-primary shadow hover:bg-accent-secondary"
           >
             Submit
           </button>

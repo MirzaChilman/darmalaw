@@ -63,7 +63,7 @@ const Portofolio = () => {
       </div>
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-accent-secondary sm:text-4xl">
             Our Portofolio
           </h2>
         </div>
@@ -83,10 +83,10 @@ const Portofolio = () => {
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
                   <a href={post.href} className="mt-2 block">
-                    <p className="text-xl font-semibold text-gray-900">
+                    <p className="text-xl font-semibold text-accent-secondary">
                       {post.title}
                     </p>
-                    <p className="mt-3 text-base text-gray-500">
+                    <p className="mt-3 text-base text-accent-primary">
                       {post.description}
                     </p>
                   </a>
@@ -96,7 +96,7 @@ const Portofolio = () => {
           ))}
         </div>
         <div className="mt-10 flex justify-center">
-          <button className="block w-full rounded bg-rose-600 px-10 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
+          <button className="block w-full rounded bg-accent-default text-accent-primary px-10 py-3 text-sm font-medium shadow hover:bg-accent-secondary focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
             Selengkapnya
           </button>
         </div>

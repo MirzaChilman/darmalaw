@@ -41,12 +41,13 @@ const Members = [
 ];
 
 const Teams = () => {
+  const iconColor = '#BF9742'
   return (
     <div className="rounded-lg bg-white p-8 shadow ">
-      <p className="text-center text-3xl font-bold text-gray-800 ">
+      <p className="text-center text-3xl font-bold text-accent-secondary ">
         Team Members
       </p>
-      <p className="mb-12 text-center text-xl font-normal text-gray-500 ">
+      <p className="mb-12 text-center text-xl font-normal text-accent-primary ">
         Meat the best team in wolrd
       </p>
       <div className="flex flex-col items-center justify-evenly md:flex-row">
@@ -61,15 +62,15 @@ const Teams = () => {
                 />
               </div>
               <div className="text-center">
-                <p className="text-2xl text-gray-800 ">{member.name}</p>
-                <p className="text-xl font-light text-gray-500 ">
+                <p className="text-2xl text-accent-secondary ">{member.name}</p>
+                <p className="text-xl font-light text-accent-primary ">
                   {member.title}
                 </p>
-                <p className="max-w-xs py-4 text-lg font-light text-gray-500 ">
+                <p className="max-w-xs py-4 text-lg font-light text-accent-primary ">
                   {member.summary}
                 </p>
               </div>
-              <div className="mx-auto flex w-44 items-center justify-between border-t border-gray-200 pt-8 text-gray-500">
+              <div className="mx-auto flex w-44 items-center justify-between border-t border-gray-200 pt-8 text-accent-primary">
                 <a
                   className="border-b-[2px] border-transparent hover:border-b-[2px]"
                   href={member.socials.facebook}
@@ -77,8 +78,8 @@ const Teams = () => {
                   <svg
                     width="30"
                     height="30"
-                    fill="currentColor"
-                    className="text-xl transition-colors duration-200 hover:text-gray-800 "
+                    fill={iconColor}
+                    className="text-xl transition-colors duration-200 hover:text-accent-secondary "
                     viewBox="0 0 1792 1792"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -92,8 +93,8 @@ const Teams = () => {
                   <svg
                     width="30"
                     height="30"
-                    fill="currentColor"
-                    className="text-xl transition-colors duration-200 hover:text-gray-800 "
+                    fill={iconColor}
+                    className="text-xl transition-colors duration-200 hover:text-accent-secondary "
                     viewBox="0 0 1792 1792"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -108,8 +109,8 @@ const Teams = () => {
                   <svg
                     width="30"
                     height="30"
-                    fill="currentColor"
-                    className="text-xl transition-colors duration-200 hover:text-gray-800 "
+                    fill={iconColor}
+                    className="text-xl transition-colors duration-200 hover:text-accent-secondary "
                     viewBox="0 0 1792 1792"
                     xmlns="http://www.w3.org/2000/svg"
                   >

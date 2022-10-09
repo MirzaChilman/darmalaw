@@ -134,6 +134,8 @@ const associate = [
   // More people...
 ];
 
+
+
 export default function Team() {
   const [showAssociate, setShowAssociate] = useState(false);
 

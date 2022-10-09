@@ -39,8 +39,9 @@ const Logo = () => {
   );
 };
 const HeaderTop = () => {
+  const iconColor = '#E6B325'
   return (
-    <header className="bg-gray-100 p-4 text-gray-800">
+    <header className="bg-gray-100 p-4 text-accent-secondary">
       <div className="container mx-auto flex h-16 justify-between">
         <div className="flex">
           <Logo />
@@ -50,7 +51,7 @@ const HeaderTop = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="black"
+              fill={iconColor}
               className=" h-8 w-8"
             >
               <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
@@ -62,7 +63,7 @@ const HeaderTop = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="black"
+              fill={iconColor}
               className="h-8 w-8"
             >
               <path

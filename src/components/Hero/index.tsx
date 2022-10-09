@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="max-w-xl text-center sm:text-left">
           <h1 className="text-3xl font-extrabold sm:text-5xl">
             Let us find your
-            <strong className="block font-extrabold text-rose-700">
+            <strong className="block font-extrabold text-accent-alternate">
               Forever Home.
             </strong>
           </h1>
@@ -20,14 +20,14 @@ const Hero = () => {
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <a
               href="#"
-              className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+              className="block w-full rounded bg-accent-default px-12 py-3 text-sm font-medium text-accent-primary shadow hover:bg-accent-alternate focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
             >
               Get Started
             </a>
 
             <a
               href="#"
-              className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+              className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-accent-primary shadow hover:text-accent-secondary focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
             >
               Learn More
             </a>

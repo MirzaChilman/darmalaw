@@ -42,20 +42,21 @@ const Links = [
 ];
 
 const HeaderBottom = () => {
+  const textColor = 'text-accent-secondary'
   return (
-    <header className="bg-gray-100 p-4 text-gray-800">
+    <header className={`bg-gray-100 p-4 ${textColor}`}>
       <div className="container mx-auto flex h-16 justify-between">
         <div className="flex">
           <ul className="hidden items-stretch space-x-3 lg:flex">
             {Links.map((link) => {
               return (
-                <li className="flex" key={link.title + link.url}>
+                <li className="flex " key={link.title + link.url}>
                   <a
                     rel="noopener noreferrer"
                     href="#"
                     // eslint-disable-next-line tailwindcss/no-contradicting-classname
-                    className={`-mb-1 flex items-center border-b-2 border-transparent px-2 ${
-                      link.isActive && 'border-violet-400 text-violet-400'
+                    className={`-mb-1 font-bold flex items-center  border-b-2 ${textColor} border-transparent px-2 ${
+                      link.isActive && 'border-accent-primary text-accent-primary'
                     }`}
                   >
                     {link.title}
@@ -66,7 +67,7 @@ const HeaderBottom = () => {
           </ul>
         </div>
         <div className="hidden shrink-0 items-center lg:flex">
-          <button className="rounded border-[2px] border-gray-800 bg-gray-100 px-8 py-3 font-semibold text-gray-900">
+          <button className="rounded border-[2px] bg-accent-default text-accent-primary px-8 py-3 font-semibold ">
             Contact Us
           </button>
         </div>
