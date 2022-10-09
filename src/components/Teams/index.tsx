@@ -50,7 +50,7 @@ const Teams = () => {
       <p className="mb-12 text-center text-xl font-normal text-accent-primary ">
         Meat the best team in wolrd
       </p>
-      <div className="flex flex-col items-center justify-evenly md:flex-row">
+      <div className="flex flex-col items-center justify-evenl   y md:flex-row">
         {Members.map((member) => {
           return (
             <div className="p-4" key={member.name + member.summary}>
