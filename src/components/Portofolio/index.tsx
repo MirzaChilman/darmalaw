@@ -96,7 +96,7 @@ const Portofolio = () => {
           ))}
         </div>
         <div className="mt-10 flex justify-center">
-          <button className="block w-full rounded bg-accent-default text-accent-primary px-10 py-3 text-sm font-medium shadow hover:bg-accent-secondary focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
+          <button className="block w-full rounded bg-accent-default px-10 py-3 text-sm font-medium text-accent-primary shadow hover:bg-accent-secondary focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
             Selengkapnya
           </button>
         </div>

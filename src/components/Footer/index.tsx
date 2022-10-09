@@ -1,12 +1,10 @@
 const Footer = () => {
-  const iconColor = '#BF9742'
+  const iconColor = '#BF9742';
   return (
     <footer className="divide-y bg-gray-100 px-4 text-accent-secondary">
       <div className="container mx-auto flex flex-col justify-between space-y-8 py-10 lg:flex-row lg:space-y-0">
         <div className="lg:w-1/3">
-          <div
-            className="flex justify-center space-x-3 lg:justify-start"
-          >
+          <div className="flex justify-center space-x-3 lg:justify-start">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,22 +27,38 @@ const Footer = () => {
             </h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Integrations
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Pricing
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   FAQ
                 </a>
               </li>
@@ -56,32 +70,54 @@ const Footer = () => {
             </h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Privacy
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Terms of Service
                 </a>
               </li>
             </ul>
           </div>
           <div className="space-y-3">
-            <h3 className="font-bold uppercase text-accent-alternate">Developers</h3>
+            <h3 className="font-bold uppercase text-accent-alternate">
+              Developers
+            </h3>
             <ul className="space-y-1">
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Public API
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Documentation
                 </a>
               </li>
               <li>
-                <a rel="noopener noreferrer" className="text-accent-primary" href="#">
+                <a
+                  rel="noopener noreferrer"
+                  className="text-accent-primary"
+                  href="#"
+                >
                   Guides
                 </a>
               </li>

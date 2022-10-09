@@ -1,6 +1,6 @@
 const ContactForm = () => {
   return (
-    <section className="bg-gray-100 p-10 text-accent-secondary">
+    <section id="contact-us" className="bg-gray-100 p-10 text-accent-secondary">
       <h2 className="p-20 text-center text-4xl font-bold">Contact Us</h2>
       <div className="mx-auto grid max-w-6xl grid-cols-1 px-6 md:grid-cols-2 md:divide-x lg:px-8">
         <div className="py-6 md:py-0 md:px-6">
@@ -47,7 +47,8 @@ const ContactForm = () => {
             </p>
           </div>
         </div>
-        <form className="ng-untouched ng-pristine ng-valid flex flex-col space-y-6 py-6 md:py-0 md:px-6">
+        {/* ng-untouched ng-pristine ng-valid */}
+        <form className=" flex flex-col space-y-6 py-6 md:py-0 md:px-6">
           <label className="block">
             <span className="mb-1">Full name</span>
             <input

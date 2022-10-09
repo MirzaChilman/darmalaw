@@ -20,11 +20,11 @@ module.exports = {
     extend: {
       colors: {
         accent: {
-          primary:'#61481C',
+          primary: '#61481C',
           secondary: '#A47E3B',
           tertiary: '#003566',
           alternate: '#BF9742',
-          default: '#E6B325'
+          default: '#E6B325',
         },
         gray: {
           100: '#f7fafc',
