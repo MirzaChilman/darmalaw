@@ -47,7 +47,8 @@ const ContactForm = () => {
             </p>
           </div>
         </div>
-        <form className="ng-untouched ng-pristine ng-valid flex flex-col space-y-6 py-6 md:py-0 md:px-6">
+        {/* ng-untouched ng-pristine ng-valid */}
+        <form className=" flex flex-col space-y-6 py-6 md:py-0 md:px-6">
           <label className="block">
             <span className="mb-1">Full name</span>
             <input
