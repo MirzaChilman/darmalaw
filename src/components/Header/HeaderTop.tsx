@@ -46,38 +46,6 @@ const HeaderTop = () => {
           <Logo />{' '}
           <span className="font-bold text-accent-primary">Darmalaw.id</span>
         </div>
-        <div className="hidden shrink-0 items-center gap-2 lg:flex">
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill={iconColor}
-              className=" h-8 w-8"
-            >
-              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-            </svg>
-            <p>agung@darmalaw.id</p>
-          </div>
-          <div className="flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill={iconColor}
-              className="h-8 w-8"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <div className="flex flex-col leading-none">
-              <p>08:00 - 17:00</p>
-              <p>Mon - Fri</p>
-            </div>
-          </div>
-        </div>
         <HamburgerMenu />
       </div>
     </header>

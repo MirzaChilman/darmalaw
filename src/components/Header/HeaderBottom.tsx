@@ -48,7 +48,7 @@ const HeaderBottom = () => {
   };
 
   return (
-    <header className={`bg-gray-100 p-4 text-accent-secondary`}>
+    <header className={`bg-gray-100 p-4 text-accent-secondary hidden lg:block`}>
       <div className="container mx-auto flex h-16 justify-between">
         <div className="flex">
           <ul className="hidden items-center  space-x-3 lg:flex">
@@ -84,7 +84,6 @@ const HeaderBottom = () => {
             Contact Us
           </button>
         </div>
-        <HamburgerMenu />
       </div>
     </header>
   );
