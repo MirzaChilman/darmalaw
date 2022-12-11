@@ -17,7 +17,7 @@ const Links = [
   },
   {
     url: '/contact',
-    title: 'contact',
+    title: 'Contact',
   },
 ];
 
@@ -34,7 +34,8 @@ const HeaderBottom = () => {
         <div className="flex">
           <ul className="hidden items-center  space-x-3 lg:flex">
             {Links.map((link) => {
-              const isActive = router.pathname.includes(link.url);
+              console.log(router)
+              const isActive = router.asPath.includes(link.title.toLowerCase()) ;
 
               return (
                 <li
@@ -48,6 +49,7 @@ const HeaderBottom = () => {
                   <Link
                     rel="noopener noreferrer"
                     href={link.url}
+                    as={link.title === 'Home' ? 'home' : link.url}
                     // eslint-disable-next-line tailwindcss/no-contradicting-classname
                   >
                     {link.title}
