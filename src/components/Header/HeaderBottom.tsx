@@ -4,20 +4,20 @@ import { useRouter } from 'next/router';
 
 const Links = [
   {
-    url: '/about-us',
-    title: 'About Us',
+    url: '/',
+    title: 'Home',
   },
   {
     url: '/team',
     title: 'Team',
   },
   {
-    url: '/client-alert',
-    title: 'Client Alert',
+    url: '/about-us',
+    title: 'About Us',
   },
   {
-    url: '/privacy',
-    title: 'Privacy',
+    url: '/contact',
+    title: 'contact',
   },
 ];
 
