@@ -16,7 +16,7 @@ const Links = [
     title: 'About Us',
   },
   {
-    url: '/contact',
+    url: '/#contact-us',
     title: 'Contact',
   },
 ];
