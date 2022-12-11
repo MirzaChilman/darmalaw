@@ -38,7 +38,6 @@ const Logo = () => {
   );
 };
 const HeaderTop = () => {
-  const iconColor = '#E6B325';
   return (
     <header className="bg-gray-100 p-4 text-accent-secondary">
       <div className="container mx-auto flex h-16 justify-between">
