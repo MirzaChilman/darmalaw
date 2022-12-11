@@ -1,13 +1,13 @@
 import ContactForm from '@/components/ContactForm';
 import Hero from '@/components/Hero';
-import Portofolio from '@/components/Portofolio';
+import PracticeAreas from '@/components/PracticeAreas';
 import Teams from '@/components/Teams';
 
 const Index = () => {
   return (
     <>
       <Hero />
-      <Portofolio />
+      <PracticeAreas />
       <Teams />
       <ContactForm />
     </>

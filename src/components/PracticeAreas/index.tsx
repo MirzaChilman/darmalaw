@@ -55,7 +55,7 @@ const posts = [
   },
 ];
 
-const Portofolio = () => {
+const PracticeAreas = () => {
   return (
     <div className="relative bg-gray-50 px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="absolute inset-0">
@@ -64,7 +64,7 @@ const Portofolio = () => {
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-accent-secondary sm:text-4xl">
-            Our Portofolio
+            Our Practice Areas
           </h2>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
@@ -95,14 +95,9 @@ const Portofolio = () => {
             </div>
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
-          <button className="block w-full rounded bg-accent-default px-10 py-3 text-sm font-medium text-accent-primary shadow hover:bg-accent-secondary focus:outline-none focus:ring active:bg-rose-500 sm:w-auto">
-            Selengkapnya
-          </button>
-        </div>
       </div>
     </div>
   );
 };
 
-export default Portofolio;
+export default PracticeAreas;
