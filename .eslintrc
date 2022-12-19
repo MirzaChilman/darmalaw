@@ -7,10 +7,11 @@
   ],
   "rules": {
     "prettier/prettier": [
-      "warning",
+      1,
       {
         "singleQuote": true,
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "printWidth": 120
       }
     ]
   },
