@@ -7,7 +7,7 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
+    linkedinUrl: '#',
   },
   {
     name: 'Lindsay Walton',
@@ -15,7 +15,7 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
+    linkedinUrl: '#',
   },
   {
     name: 'Lindsay Walton',
@@ -23,7 +23,7 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
+    linkedinUrl: '#',
   },
   {
     name: 'Lindsay Walton',
@@ -31,7 +31,7 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
+    linkedinUrl: '#',
   },
   {
     name: 'Lindsay Walton',
@@ -39,7 +39,7 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
+    linkedinUrl: '#',
   },
   {
     name: 'Lindsay Walton',
@@ -47,7 +47,7 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
+    linkedinUrl: '#',
   },
   {
     name: 'Lindsay Walton',
@@ -55,8 +55,8 @@ const people = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     twitterUrl: '#',
-    linkedinUrl: '#'
-  }
+    linkedinUrl: '#',
+  },
   // More people...
 ];
 
@@ -107,7 +107,8 @@ export default function Team() {
                   className="text-md text-gray-800 hover:cursor-pointer"
                   onClick={() => handleClick(person.linkedinUrl)}
                 >
-                  {person.name}@gmail.com
+                  {person.name}
+                  @gmail.com
                 </p>
                 <div className="mt-3 hover:cursor-pointer">
                   <svg
@@ -153,7 +154,8 @@ export default function Team() {
                   className="text-md text-gray-800 hover:cursor-pointer"
                   onClick={() => handleClick(person.linkedinUrl)}
                 >
-                  {person.name}@gmail.com
+                  {person.name}
+                  @gmail.com
                 </p>
                 <div className="mt-3 hover:cursor-pointer">
                   <svg

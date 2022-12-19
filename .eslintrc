@@ -36,7 +36,7 @@
       },
       "rules": {
         "prettier/prettier": [
-          "error",
+          1,
           {
             "singleQuote": true,
             "endOfLine": "auto"
