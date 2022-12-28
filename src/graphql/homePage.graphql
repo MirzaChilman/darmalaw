@@ -1,0 +1,13 @@
+query homePageEntryQuery {
+  homePage(id: "2ebVilgWLpMUCBp0dNLnUK") {
+    sys {
+      id
+    }
+    heroTitle
+    heroSubTitle
+    description
+    heroImage{
+      url
+    }
+  }
+}

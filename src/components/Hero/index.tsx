@@ -16,22 +16,6 @@ const Hero = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
             illo tenetur fuga ducimus numquam ea!
           </p>
-
-          <div className="mt-8 flex flex-wrap gap-4 text-center">
-            <a
-              href="#"
-              className="block w-full rounded bg-accent-default px-12 py-3 text-sm font-medium text-accent-primary shadow hover:bg-accent-alternate focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
-            >
-              Get Started
-            </a>
-
-            <a
-              href="#"
-              className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-accent-primary shadow hover:text-accent-secondary focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
-            >
-              Learn More
-            </a>
-          </div>
         </div>
       </div>
     </section>
