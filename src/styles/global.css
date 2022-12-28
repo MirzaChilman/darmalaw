@@ -1,4 +1,5 @@
 @tailwind base;
+
 a{
   @apply border-b-2 border-transparent mb-[-2px]
 }
