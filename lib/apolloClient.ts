@@ -6,12 +6,9 @@ import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
 import { useMemo } from 'react';
 
-const CONTENTFUL_DELIVERY_TOKEN = 'yKRhRwG6hY7qEO0AwFTjseMK6IaXpANzjORX3APNjzY';
-const CONTENTFUL_SPACE_ID = 'y8qrui2melcv';
-const apolloUri = `https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}/environments/master`;
-
+const apolloUri = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`;
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__';
-
+console.log('apolloUri', apolloUri);
 let apolloClient;
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
@@ -28,7 +25,7 @@ const httpLink = new HttpLink({
   uri: apolloUri, // Server URL (must be absolute)
   credentials: 'same-origin',
   headers: {
-    Authorization: `Bearer ${CONTENTFUL_DELIVERY_TOKEN}`,
+    Authorization: `Bearer ${String(process.env.CONTENTFUL_DELIVERY_TOKEN)}`,
   }, // Additional fetch() options like `credentials` or `headers`
 });
 

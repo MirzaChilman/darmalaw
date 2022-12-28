@@ -47,6 +47,8 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/apolloClient.js",
-    "lib/apolloClient.js"
+    "lib/apolloClient.js",
+    "src/utils/richTextRenderer.tsx",
+    "src/utils/richTextRenderer.tsx"
   ]
 }
