@@ -1,11 +1,11 @@
 const AboutUs = () => {
   return (
-    <section className="mx-auto max-w-5xl text-center">
+    <section className="mx-auto max-w-7xl px-7 text-center">
       <h1 className="mb-2 text-4xl font-bold text-accent-secondary">
         About Us
       </h1>
-      <p className="text-accent-primary">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt earum,
+      <p className="text-accent-primary text-justify">
+        Lorem ipsum dolor sit, amet consectetur adipisicinggit elit. Sunt earum,
         voluptates repudiandae consequatur unde excepturi aliquid, magni
         reprehenderit aliquam soluta exercitationem. Consequuntur, odio
         cupiditate laboriosam esse autem aspernatur, ut rerum a aliquam fugit

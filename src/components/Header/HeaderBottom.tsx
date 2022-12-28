@@ -1,42 +1,22 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const HamburgerMenu = () => {
-  return (
-    <button className="p-4 lg:hidden">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        className="h-6 w-6 text-gray-800"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        ></path>
-      </svg>
-    </button>
-  );
-};
 const Links = [
   {
-    url: '/about-us',
-    title: 'About Us',
+    url: '/',
+    title: 'Home',
   },
   {
     url: '/team',
     title: 'Team',
   },
   {
-    url: '/client-alert',
-    title: 'Client Alert',
+    url: '/about-us',
+    title: 'About Us',
   },
   {
-    url: '/privacy',
-    title: 'Privacy',
+    url: '/#contact-us',
+    title: 'Contact',
   },
 ];
 
@@ -48,26 +28,22 @@ const HeaderBottom = () => {
   };
 
   return (
-    <header className={`bg-gray-100 p-4 text-accent-secondary`}>
+    <header className={`hidden bg-gray-100 p-4 text-accent-secondary lg:block`}>
       <div className="container mx-auto flex h-16 justify-between">
         <div className="flex">
           <ul className="hidden items-center  space-x-3 lg:flex">
             {Links.map((link) => {
-              const isActive = router.pathname.includes(link.url);
+              // const isActive = router.asPath.includes(link.title.toLowerCase());
 
               return (
                 <li
-                  className={`flex  items-center  border-b-2  border-transparent px-2 font-bold text-accent-secondary ${
-                    isActive
-                      ? 'border-b-2 border-accent-primary text-accent-primary'
-                      : ''
-                  }`}
+                  className={`flex  items-center  border-b-2  border-transparent px-2 font-bold text-accent-secondary `}
                   key={link.title + link.url}
                 >
                   <Link
                     rel="noopener noreferrer"
                     href={link.url}
-                    // eslint-disable-next-line tailwindcss/no-contradicting-classname
+                    as={link.title === 'Home' ? 'home' : link.url}
                   >
                     {link.title}
                   </Link>
@@ -84,7 +60,6 @@ const HeaderBottom = () => {
             Contact Us
           </button>
         </div>
-        <HamburgerMenu />
       </div>
     </header>
   );

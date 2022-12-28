@@ -1,5 +1,5 @@
 const About = () => (
-  <div className="mx-auto flex max-w-2xl flex-col justify-center py-20 ">
+  <div className="mx-auto flex max-w-7xl flex-col justify-center py-20 ">
     <h1 className="mb-5 text-center text-4xl font-bold">About Us</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Turpis nibh
