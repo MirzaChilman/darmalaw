@@ -1,6 +1,7 @@
 import { gql } from '@apollo/client';
-import { initializeApollo } from 'lib/apolloClient';
+import { addApolloState, initializeApollo } from 'lib/apolloClient';
 
+import { DEFAULT_REVALIDATE } from '@/constant';
 import RichTextRenderer from '@/utils/richTextRenderer';
 
 interface Props {
@@ -88,11 +89,12 @@ export async function getStaticProps() {
     `,
   });
 
-  return {
+  return addApolloState(apolloClient, {
     props: {
       aboutUsCollection: data.aboutUsCollection,
     },
-  };
+    revalidate: DEFAULT_REVALIDATE,
+  });
 }
 
 export default AboutUs;

@@ -8,7 +8,6 @@ import { useMemo } from 'react';
 
 const apolloUri = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`;
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__';
-console.log('apolloUri', apolloUri);
 let apolloClient;
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
