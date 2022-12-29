@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { initializeApollo } from 'lib/apolloClient';
+import { addApolloState, initializeApollo } from 'lib/apolloClient';
 
 import ContactForm from '@/components/ContactForm';
 import Hero from '@/components/Hero';
@@ -66,13 +66,13 @@ export async function getStaticProps() {
     `,
   });
 
-  return {
+  return addApolloState(apolloClient, {
     props: {
       homePage: homePageData.homePage,
       clients: clientData.practiceAreasCollection,
     },
     revalidate: DEFAULT_REVALIDATE,
-  };
+  });
 }
 
 export default Index;

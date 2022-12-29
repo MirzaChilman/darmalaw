@@ -1,1 +1,1 @@
-export const DEFAULT_REVALIDATE = 600; // 10 minutes
+export const DEFAULT_REVALIDATE = 60; // 10 minutes
