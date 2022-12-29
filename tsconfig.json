@@ -41,12 +41,11 @@
       "@/public/*": ["./public/*"]
     }
   },
-  "exclude": ["./out/**/*", "./node_modules/**/*", "**/*.cy.ts"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "lib/apolloClient.js",
-    "lib/apolloClient.js"
-  ]
+  "exclude": [
+    "./out/**/*",
+    "./node_modules/**/*",
+    "**/*.cy.ts",
+    "src/utils/richTextRenderer.tsx"
+  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/apolloClient.ts"]
 }

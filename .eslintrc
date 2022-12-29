@@ -19,6 +19,7 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
+      "excludedFiles":["**/*/richTextRenderer.tsx"],
       "plugins": [
         "@typescript-eslint",
         "unused-imports",
@@ -42,6 +43,7 @@
             "endOfLine": "auto"
           }
         ],
+        "no-restricted-syntax": "off",
         "react/destructuring-assignment": "off", // Vscode doesn't support automatically destructuring, it's a pain to add a new variable
         "jsx-a11y/anchor-is-valid": "off", // Next.js uses its own internal link system
         "react/require-default-props": "off", // Allow non-defined react props as undefined
