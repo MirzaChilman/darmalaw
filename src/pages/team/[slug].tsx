@@ -32,7 +32,7 @@ const TeamDetail = (props: Props) => {
     <div className="relative mx-auto max-w-7xl px-5">
       <Banner
         name={currentItems?.name || ''}
-        image={currentItems?.backgroundImage.url || ''}
+        image={currentItems?.backgroundImage?.url || ''}
       />
 
       <div className="container mx-auto flex flex-col gap-12 py-5 sm:flex-row lg:space-y-0">
