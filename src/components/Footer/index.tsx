@@ -7,12 +7,13 @@ const Footer = () => {
             width={250}
             height={70}
             src="/assets/images/brand-logo.png"
-            alt="Darmalaw Logo"
+            alt=""
           />
         </div>
       </div>
       <div className="text-md py-6 text-left text-accent-secondary">
-        Copyright © 2019-2022 Name of Company All rights reserved.
+        Copyright © 2019-{new Date().getFullYear()} Name of Company All rights
+        reserved.
       </div>
     </footer>
   );
