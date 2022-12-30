@@ -15,7 +15,17 @@ interface Props {
 
 const Index = (props: Props) => {
   const {
-    homePage: { heroImage, description, heroSubTitle, heroTitle },
+    homePage: {
+      heroImage,
+      description,
+      heroSubTitle,
+      heroTitle,
+      contactFormEmail,
+      contactFormLocation,
+      contactFormPhoneNumber,
+      contactFormSubTitle,
+      contactFormTitle,
+    },
     clients: { items },
   } = props;
 
@@ -28,7 +38,13 @@ const Index = (props: Props) => {
         heroTitle={heroTitle}
       />
       {items.length !== 0 && <PracticeAreas items={items} />}
-      <ContactForm />
+      <ContactForm
+        contactFormEmail={contactFormEmail}
+        contactFormLocation={contactFormLocation}
+        contactFormPhoneNumber={contactFormPhoneNumber}
+        contactFormSubTitle={contactFormSubTitle}
+        contactFormTitle={contactFormTitle}
+      />
     </>
   );
 };
@@ -37,13 +53,20 @@ export async function getStaticProps() {
   const apolloClient = initializeApollo();
   const { data: homePageData } = await apolloClient.query({
     query: gql`
-      query homePageEntryQuery {
-        homePage(id: "2ebVilgWLpMUCBp0dNLnUK") {
-          heroTitle
-          heroSubTitle
-          description
-          heroImage {
-            url
+      query {
+        homePageCollection(limit: 1) {
+          items {
+            contactFormTitle
+            contactFormSubTitle
+            contactFormLocation
+            contactFormPhoneNumber
+            contactFormEmail
+            heroTitle
+            heroSubTitle
+            description
+            heroImage {
+              url
+            }
           }
         }
       }
@@ -68,7 +91,7 @@ export async function getStaticProps() {
 
   return addApolloState(apolloClient, {
     props: {
-      homePage: homePageData.homePage,
+      homePage: homePageData.homePageCollection.items?.[0],
       clients: clientData.practiceAreasCollection,
     },
     revalidate: DEFAULT_REVALIDATE,

@@ -11,4 +11,9 @@ export interface HomePage {
     __typename?: string;
     url: string;
   };
+  contactFormTitle: string;
+  contactFormSubTitle: string;
+  contactFormLocation: string;
+  contactFormPhoneNumber: string;
+  contactFormEmail: string;
 }

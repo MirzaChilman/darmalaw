@@ -29,8 +29,7 @@ const Hero = ({
 
           {description && (
             <p className="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
+              {description}
             </p>
           )}
         </div>
