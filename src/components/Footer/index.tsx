@@ -7,7 +7,7 @@ const Footer = () => {
             width={250}
             height={70}
             src="/assets/images/brand-logo.png"
-            alt=""
+            alt="Darmalaw Logo"
           />
         </div>
       </div>
