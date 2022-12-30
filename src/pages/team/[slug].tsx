@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 import { addApolloState, initializeApollo } from 'lib/apolloClient';
-import type { GetStaticPropsContext } from 'next';
+import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 
 import Banner from '@/components/Banner';
 import { DEFAULT_REVALIDATE } from '@/constant';
@@ -68,7 +68,7 @@ const TeamDetail = (props: Props) => {
   );
 };
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<GetStaticPaths> {
   const apolloClient = initializeApollo();
 
   const { data } = await apolloClient.query({
@@ -92,7 +92,7 @@ export async function getStaticPaths() {
   });
   return addApolloState(apolloClient, {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   });
 }
 
