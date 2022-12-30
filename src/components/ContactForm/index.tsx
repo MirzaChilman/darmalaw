@@ -1,3 +1,6 @@
+import emailjs from '@emailjs/browser';
+import React, { useEffect, useRef, useState } from 'react';
+
 import type { HomePage } from '@/types/HomePage';
 
 const ContactForm = ({
@@ -14,6 +17,41 @@ const ContactForm = ({
   | 'contactFormSubTitle'
   | 'contactFormTitle'
 >) => {
+  const [loading, setLoading] = useState(false);
+  const [sendEmailSuccess, setSendEmailSuccess] = useState(false);
+  const form = useRef(null);
+  const sendEmail = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID || '',
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || '',
+        form.current || '',
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY || ''
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSendEmailSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    if (sendEmailSuccess) {
+      setTimeout(() => {
+        setSendEmailSuccess(false);
+      }, 3000);
+    }
+  }, [sendEmailSuccess]);
+
   return (
     <section id="contact-us" className="bg-gray-100 p-10 text-accent-secondary">
       <h2 className="p-20 text-center text-4xl font-bold">Contact Us</h2>
@@ -71,35 +109,50 @@ const ContactForm = ({
           </div>
         </div>
         {/* ng-untouched ng-pristine ng-valid */}
-        <form className=" flex flex-col space-y-6 py-6 md:py-0 md:px-6">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex flex-col space-y-6 py-6 md:py-0 md:px-6"
+        >
+          {sendEmailSuccess && (
+            <div className="rounded-md bg-accent-secondary p-2 font-bold text-gray-50">
+              Success sending email
+            </div>
+          )}
           <label className="block">
             <span className="mb-1">Full name</span>
             <input
               type="text"
+              name="name"
               placeholder="Leroy Jenkins"
-              className="block w-full rounded-md p-3 shadow-sm  focus:border-violet-400 focus:opacity-75"
+              className="block w-full rounded-md p-3 shadow-sm focus:border-violet-400 focus:opacity-75"
             />
           </label>
           <label className="block">
             <span className="mb-1">Email address</span>
             <input
               type="email"
+              name="email"
               placeholder="leroy@jenkins.com"
-              className="block w-full rounded-md p-3 shadow-sm  focus:border-violet-400 focus:opacity-75"
+              className="block w-full rounded-md p-3 shadow-sm focus:border-violet-400 focus:opacity-75"
             />
           </label>
           <label className="block">
             <span className="mb-1">Message</span>
             <textarea
+              name="message"
               rows={3}
-              className="block w-full rounded-md p-3 shadow-sm  focus:border-violet-400 focus:opacity-75"
+              className="block w-full rounded-md p-3 shadow-sm focus:border-violet-400 focus:opacity-75"
             ></textarea>
           </label>
           <button
-            type="button"
-            className="self-center rounded  bg-accent-default px-8 py-2 text-lg text-accent-primary shadow hover:bg-accent-secondary"
+            disabled={loading}
+            type="submit"
+            className={`${
+              loading ? 'bg-gray-500' : 'bg-accent-default'
+            } self-center rounded px-8 py-2 text-lg text-accent-primary shadow hover:bg-accent-secondary`}
           >
-            Submit
+            {loading ? 'Sending' : 'Submit'}
           </button>
         </form>
       </div>
